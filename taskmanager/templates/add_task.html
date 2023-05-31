@@ -13,6 +13,7 @@
                 <label for="task_name">Task Name</label>
             </div>
         </div>
+<<<<<<< HEAD
         <!-- task description -->
         <div class="row">
             <div class="input-field col s12">
@@ -56,6 +57,52 @@
                 <label for="category_id">Category</label>
             </div>
         </div>
+=======
+        <!-- task description-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas-fa-align-left prefix light-blue-text text-darken-4"></i>
+                <textarea id="task_description" name="task_description" minlength="5" maxlength="300" type="text" 
+                class="materialize-textarea validate" required></textarea>
+                    <label for="task_description">Task Description</label>
+            </div>
+        </div>
+        <!-- due_date description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas-fa-align-left prefix light-blue-text text-darken-4"> </i>
+                <input id="due_date" name="due_date" type="text" class="datepicker validate" required></input>
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!-- is_urgent -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                <label for="is_urgent">
+                <input id="is_urgent" name="is_urgent" type="checkbox">
+                <span class="lever"></span>
+                Is Urgent
+                </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- category_id -->
+    <div class="row">
+    <div class="input-field col s-12">
+        <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+        <select id="category_id" name="category_id" class="validate" required>
+            <option value="" disable-selected>Choose Category</option>
+            {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.category_name }}</option>
+            {% endfor %}
+        </select>
+        <label for="category_id">Category</label>
+        </div>
+    </div>
+>>>>>>> 8784b5c79aa212ebf3e10ffba003fb62357cbcf7
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">

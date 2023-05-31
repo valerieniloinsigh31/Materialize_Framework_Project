@@ -42,7 +42,10 @@ def delete_category(category_id):
     db.session.commit()
     return redirect(url_for("categories"))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8784b5c79aa212ebf3e10ffba003fb62357cbcf7
 @app.route("/add_task", methods=["GET", "POST"])
 def add_task():
     categories = list(Category.query.order_by(Category.category_name).all())
@@ -57,4 +60,8 @@ def add_task():
         db.session.add(task)
         db.session.commit()
         return redirect(url_for("home"))
+<<<<<<< HEAD
     return render_template("add_task.html", categories=categories)
+=======
+    return render_template("add_task.html", category=category)
+>>>>>>> 8784b5c79aa212ebf3e10ffba003fb62357cbcf7
