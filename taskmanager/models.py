@@ -1,5 +1,6 @@
 from taskmanager import db
 
+
 class Category(db.Model):
     # schema for the Category model
     id = db.Column(db.Integer, primary_key=True)
@@ -9,6 +10,7 @@ class Category(db.Model):
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
         return self.category_name
+
 
 class Task(db.Model):
     # schema for the Task model
@@ -25,5 +27,4 @@ class Task(db.Model):
             self.id, self.task_name, self.is_urgent
         )
 
-#Alternatively could use, f"{strings}" return "#{self.id} - Task: {self.task_name} | Urgent: {self.is_urgent}"
-
+# Alternatively could use, f"{strings}" return "#{self.id} - Task: {self.task_name} | Urgent: {self.is_urgent}"
